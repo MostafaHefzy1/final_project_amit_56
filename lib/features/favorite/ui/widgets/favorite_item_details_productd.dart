@@ -1,4 +1,6 @@
-import 'package:final_project_amit56/features/favorite/logic/favorite_cubit.dart';
+import '../../../../core/base_widget/loading_indictor.dart';
+import '../../logic/favorite_cubit.dart';
+import '../../../home/logic/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,8 +14,15 @@ class FavoriteItemDetailsProductd extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<FavoriteCubit, FavoriteState>(
       listener: (context, state) {
+        if (state is AddOrDeleteFavoriteLoading) {
+          showLoadingIndictor(context);
+        }
         if (state is AddOrDeleteFavoriteSuceess) {
+          Navigator.pop(context) ; 
+          print("inFavorites before $inFavorites");
           inFavorites = !inFavorites;
+          print("inFavorites After $inFavorites");
+          // HomeCubit.get(context).getDetailsProduct(productId);
         }
       },
       builder: (context, state) {

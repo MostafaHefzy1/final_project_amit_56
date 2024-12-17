@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:final_project_amit56/core/base_widget/custom_network_image.dart';
-import 'package:final_project_amit56/features/home/logic/home_cubit.dart';
+import '../../../../core/base_widget/custom_network_image.dart';
+import '../../logic/home_cubit.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

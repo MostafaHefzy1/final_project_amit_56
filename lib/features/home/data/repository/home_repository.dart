@@ -1,8 +1,8 @@
-import 'package:final_project_amit56/features/home/data/models/banners_model.dart';
-import 'package:final_project_amit56/features/home/data/models/categories_model.dart';
-import 'package:final_project_amit56/features/home/data/models/details_product_model.dart';
-import 'package:final_project_amit56/features/home/data/models/products_model.dart';
-import 'package:final_project_amit56/features/home/data/web_services/home_web_services.dart';
+import '../models/banners_model.dart';
+import '../models/categories_model.dart';
+import '../models/details_product_model.dart';
+import '../models/products_model.dart';
+import '../web_services/home_web_services.dart';
 
 class HomeRepository {
   final HomeWebServices _homeWebServices;

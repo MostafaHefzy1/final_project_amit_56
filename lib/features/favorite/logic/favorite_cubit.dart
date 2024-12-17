@@ -1,8 +1,8 @@
-import 'package:bloc/bloc.dart';
-import 'package:final_project_amit56/features/favorite/data/model/favorite_product_model.dart';
-import 'package:final_project_amit56/features/favorite/data/repository/favorite_repository.dart';
+import '../data/model/favorite_product_model.dart';
+import '../data/repository/favorite_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
+
+import '../../../core/app_import/app_import.dart';
 
 part 'favorite_state.dart';
 
@@ -13,6 +13,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   static FavoriteCubit get(context) => BlocProvider.of(context);
 
   void addOrDeleteFavoriteProduct(int productID) async {
+    emit(AddOrDeleteFavoriteLoading());
     await _favoriteRepository
         .addOrDeleteFavoriteProduct(productID)
         .then((value) {

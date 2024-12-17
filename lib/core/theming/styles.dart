@@ -13,4 +13,11 @@ class TextStyles {
     fontSize: 14.sp,
     color: Colors.black,
   );
+
+
+  static TextStyle font16BrownBold = TextStyle(
+    fontSize: 16.sp,
+    color: Colors.brown,
+    fontWeight: FontWeight.bold
+  );
 }

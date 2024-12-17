@@ -1,4 +1,4 @@
-import 'package:final_project_amit56/features/home/data/models/products_model.dart';
+import 'products_model.dart';
 
 class DetailsProductsModel {
   bool? status;

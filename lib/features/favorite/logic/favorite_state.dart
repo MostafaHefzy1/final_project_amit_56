@@ -6,6 +6,7 @@ sealed class FavoriteState {}
 final class FavoriteInitial extends FavoriteState {}
 
 
+final class AddOrDeleteFavoriteLoading extends FavoriteState {}
 final class AddOrDeleteFavoriteSuceess extends FavoriteState {}
 final class AddOrDeleteFavoriteFailed extends FavoriteState {}
 

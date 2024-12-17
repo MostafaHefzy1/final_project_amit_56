@@ -1,9 +1,13 @@
-import 'package:final_project_amit56/features/basic_app/ui/bottom_nav_bar_screen.dart';
-import 'package:final_project_amit56/features/home/data/models/categories_model.dart';
-import 'package:final_project_amit56/features/home/data/models/details_product_model.dart';
-import 'package:final_project_amit56/features/home/data/models/products_model.dart';
-import 'package:final_project_amit56/features/home/ui/product_by_catogery.dart';
-import 'package:final_project_amit56/features/home/ui/product_details_screen.dart';
+import '../../features/basic_app/ui/bottom_nav_bar_screen.dart';
+import '../../features/home/data/models/categories_model.dart';
+import '../../features/home/data/models/details_product_model.dart';
+import '../../features/home/data/models/products_model.dart';
+import '../../features/home/ui/product_by_catogery.dart';
+import '../../features/home/ui/product_details_screen.dart';
+import '../../features/settings/ui/address/address_screen.dart';
+import '../../features/settings/ui/change_password/change_password_screen.dart';
+import '../../features/settings/ui/profile/profile_screen.dart';
+import '../../features/settings/ui/profile/update_profile_screen.dart';
 
 import '../app_import/app_import.dart';
 
@@ -35,6 +39,14 @@ class AppRouter {
             screen: ProductDetailsScreen(
           productItem: productItem,
         ));
+      case Routes.profileScreen:
+        return pageRouteBuilder(screen: ProfileScreen());
+      case Routes.updateProfileScreen:
+        return pageRouteBuilder(screen: UpdateProfileScreen());
+      case Routes.changePasswordScreen:
+        return pageRouteBuilder(screen: ChangePasswordScreen());
+      case Routes.addressScreen:
+        return pageRouteBuilder(screen: AddressScreen());
     }
     return null;
   }

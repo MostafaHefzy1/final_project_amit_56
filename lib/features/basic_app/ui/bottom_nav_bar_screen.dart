@@ -1,4 +1,4 @@
-import 'package:final_project_amit56/features/basic_app/logic/basic_app_cubit.dart';
+import '../logic/basic_app_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,14 +32,14 @@ class BottomNavBarScreen extends StatelessWidget {
                     label: "Cart"),
                 BottomNavigationBarItem(
                     icon: Icon(
-                      Icons.person_outline_outlined,
-                    ),
-                    label: "Profile"),
-                BottomNavigationBarItem(
-                    icon: Icon(
                       Icons.favorite,
                     ),
                     label: "Favorite"),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.settings,
+                    ),
+                    label: "Settings"),
               ]),
         );
       },

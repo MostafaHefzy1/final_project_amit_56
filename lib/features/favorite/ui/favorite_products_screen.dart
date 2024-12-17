@@ -1,30 +1,29 @@
-import 'package:final_project_amit56/core/base_widget/custom_app_bar.dart';
-import 'package:final_project_amit56/core/base_widget/custom_network_image.dart';
-import 'package:final_project_amit56/core/helper/default_dimensions.dart';
-import 'package:final_project_amit56/core/helper/spacing.dart';
-import 'package:final_project_amit56/core/theming/styles.dart';
-import 'package:final_project_amit56/features/favorite/logic/favorite_cubit.dart';
+import '../../../core/base_widget/custom_app_bar.dart';
+import '../../../core/base_widget/custom_network_image.dart';
+import '../../../core/base_widget/loading_indictor.dart';
+import '../../../core/helper/default_dimensions.dart';
+import '../../../core/helper/spacing.dart';
+import '../../../core/theming/styles.dart';
+import '../logic/favorite_cubit.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class FavoriteProductsScreen extends StatelessWidget {
+  const FavoriteProductsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FavoriteCubit, FavoriteState>(
       builder: (context, state) {
         var cubit = FavoriteCubit.get(context);
         return Scaffold(
-          appBar: CustomAppBar(
+          appBar: const CustomAppBar(
             title: "Favorites",
           ),
           body: cubit.favoriteProductsModel == null
-              ? const Center(
-                  child: SpinKitFadingCube(
-                  color: Colors.brown,
-                ))
+              ? LoadingIndictor()
               : GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,

@@ -1,7 +1,7 @@
-import 'package:final_project_amit56/features/auth/data/models/auth_response_model.dart';
-import 'package:final_project_amit56/features/auth/data/models/login_request_model.dart';
-import 'package:final_project_amit56/features/auth/data/models/register_request_model.dart';
-import 'package:final_project_amit56/features/auth/data/web_services/auth_web_services.dart';
+import '../models/auth_response_model.dart';
+import '../models/login_request_model.dart';
+import '../models/register_request_model.dart';
+import '../web_services/auth_web_services.dart';
 
 class AuthRepository {
   final AuthWebServices _authWebServices;

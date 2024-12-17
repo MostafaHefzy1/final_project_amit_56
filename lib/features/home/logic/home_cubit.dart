@@ -1,8 +1,8 @@
-import 'package:final_project_amit56/features/home/data/models/banners_model.dart';
-import 'package:final_project_amit56/features/home/data/models/categories_model.dart';
-import 'package:final_project_amit56/features/home/data/models/details_product_model.dart';
-import 'package:final_project_amit56/features/home/data/models/products_model.dart';
-import 'package:final_project_amit56/features/home/data/repository/home_repository.dart';
+import '../data/models/banners_model.dart';
+import '../data/models/categories_model.dart';
+import '../data/models/details_product_model.dart';
+import '../data/models/products_model.dart';
+import '../data/repository/home_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,7 +15,7 @@ class HomeCubit extends Cubit<HomeState> {
   static HomeCubit get(context) => BlocProvider.of(context);
 
   BannersModel? bannersModel;
-  void getBanners() async {
+  getBanners() async {
     emit(GetBannersLoadingState());
     await _homeRepository.getBanners().then((value) {
       bannersModel = value;

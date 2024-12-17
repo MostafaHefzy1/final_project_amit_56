@@ -1,10 +1,10 @@
-import 'package:final_project_amit56/core/base_widget/custom_app_bar.dart';
-import 'package:final_project_amit56/core/base_widget/custom_button.dart';
-import 'package:final_project_amit56/core/base_widget/custom_failure_text.dart';
-import 'package:final_project_amit56/core/base_widget/custom_text_form_filed.dart';
-import 'package:final_project_amit56/core/helper/spacing.dart';
-import 'package:final_project_amit56/core/routing/routes.dart';
-import 'package:final_project_amit56/features/auth/logic/auth_cubit.dart';
+import '../../../core/base_widget/custom_app_bar.dart';
+import '../../../core/base_widget/custom_button.dart';
+import '../../../core/base_widget/custom_failure_text.dart';
+import '../../../core/base_widget/custom_text_form_filed.dart';
+import '../../../core/helper/spacing.dart';
+import '../../../core/routing/routes.dart';
+import '../logic/auth_cubit.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

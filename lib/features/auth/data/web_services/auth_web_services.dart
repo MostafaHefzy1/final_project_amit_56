@@ -1,7 +1,7 @@
-import 'package:final_project_amit56/core/network/global/dio_helper.dart';
-import 'package:final_project_amit56/core/network/global/end_point.dart';
-import 'package:final_project_amit56/features/auth/data/models/login_request_model.dart';
-import 'package:final_project_amit56/features/auth/data/models/register_request_model.dart';
+import '../../../../core/network/global/dio_helper.dart';
+import '../../../../core/network/global/end_point.dart';
+import '../models/login_request_model.dart';
+import '../models/register_request_model.dart';
 
 class AuthWebServices {
   

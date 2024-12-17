@@ -1,4 +1,4 @@
-import 'package:final_project_amit56/core/helper/default_dimensions.dart';
+import '../helper/default_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,6 +9,7 @@ class CustomTextFormFiled extends StatelessWidget {
   final Function? validator;
   final TextEditingController controller;
   final TextInputType keyboardType;
+  final bool readOnly;  
   const CustomTextFormFiled(
       {super.key,
       required this.hintText,
@@ -16,11 +17,13 @@ class CustomTextFormFiled extends StatelessWidget {
       this.suffixIcon,
       this.keyboardType = TextInputType.name,
       required this.validator,
+      this.readOnly=false  , 
       required this.controller});
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       // obscureText: true,
+      readOnly:readOnly ,
       keyboardType: keyboardType,
       validator: (String? value) {
         validator!(value);

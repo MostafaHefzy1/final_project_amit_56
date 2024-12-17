@@ -1,6 +1,6 @@
-import 'package:final_project_amit56/features/favorite/data/model/add_or_delete_product_model.dart';
-import 'package:final_project_amit56/features/favorite/data/model/favorite_product_model.dart';
-import 'package:final_project_amit56/features/favorite/data/web_services/favorite_web_services.dart';
+import '../model/add_or_delete_product_model.dart';
+import '../model/favorite_product_model.dart';
+import '../web_services/favorite_web_services.dart';
 
 class FavoriteRepository {
   final FavoriteWebServices _favoriteWebServices;

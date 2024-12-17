@@ -1,9 +1,9 @@
-import 'package:final_project_amit56/core/base_widget/custom_network_image.dart';
-import 'package:final_project_amit56/core/helper/default_dimensions.dart';
-import 'package:final_project_amit56/core/helper/spacing.dart';
-import 'package:final_project_amit56/core/routing/routes.dart';
-import 'package:final_project_amit56/features/home/data/models/categories_model.dart';
-import 'package:final_project_amit56/features/home/logic/home_cubit.dart';
+import '../../../../core/base_widget/custom_network_image.dart';
+import '../../../../core/helper/default_dimensions.dart';
+import '../../../../core/helper/spacing.dart';
+import '../../../../core/routing/routes.dart';
+import '../../data/models/categories_model.dart';
+import '../../logic/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

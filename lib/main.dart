@@ -1,13 +1,15 @@
-import 'package:final_project_amit56/core/bloc_observer/bloc_observer.dart';
-import 'package:final_project_amit56/core/network/global/dio_helper.dart';
-import 'package:final_project_amit56/core/network/local/shared_preference.dart';
-import 'package:final_project_amit56/core/routing/app_router.dart';
-import 'package:final_project_amit56/core/routing/routes.dart';
-import 'package:final_project_amit56/core/services/services_locator.dart';
-import 'package:final_project_amit56/features/auth/logic/auth_cubit.dart';
-import 'package:final_project_amit56/features/basic_app/logic/basic_app_cubit.dart';
-import 'package:final_project_amit56/features/favorite/logic/favorite_cubit.dart';
-import 'package:final_project_amit56/features/home/logic/home_cubit.dart';
+import 'core/bloc_observer/bloc_observer.dart';
+import 'core/network/global/dio_helper.dart';
+import 'core/network/local/shared_preference.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
+import 'core/services/services_locator.dart';
+import 'features/auth/logic/auth_cubit.dart';
+import 'features/basic_app/logic/basic_app_cubit.dart';
+import 'features/cart/logic/cart_cubit.dart';
+import 'features/favorite/logic/favorite_cubit.dart';
+import 'features/home/logic/home_cubit.dart';
+import 'features/settings/logic/profile_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,6 +44,8 @@ class MyApp extends StatelessWidget {
             BlocProvider(create: (BuildContext context) => sl<BasicAppCubit>()),
             BlocProvider(create: (BuildContext context) => sl<HomeCubit>()),
             BlocProvider(create: (BuildContext context) => sl<FavoriteCubit>()),
+            BlocProvider(create: (BuildContext context) => sl<ProfileCubit>()),
+            BlocProvider(create: (BuildContext context) => sl<CartCubit>()),
           ],
           child: MaterialApp(
             title: 'Flutter Demo',

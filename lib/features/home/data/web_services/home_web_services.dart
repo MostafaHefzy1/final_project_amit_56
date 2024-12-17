@@ -1,5 +1,5 @@
-import 'package:final_project_amit56/core/network/global/dio_helper.dart';
-import 'package:final_project_amit56/core/network/global/end_point.dart';
+import '../../../../core/network/global/dio_helper.dart';
+import '../../../../core/network/global/end_point.dart';
 
 class HomeWebServices {
   Future<dynamic> getBanners() async {

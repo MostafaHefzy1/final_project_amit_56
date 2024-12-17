@@ -7,5 +7,12 @@ class Routes {
   static const String productDetailsScreen = "/productDetailsScreen";
 
 
+  
+  static const String profileScreen = "/profileScreen";
+  static const String updateProfileScreen = "/updateProfileScreen";
+  static const String addressScreen = "/addressScreen";
+  static const String changePasswordScreen = "/changePasswordScreen";
+
+
 
 }

@@ -1,12 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:final_project_amit56/core/base_widget/custom_button.dart';
-import 'package:final_project_amit56/core/base_widget/custom_network_image.dart';
-import 'package:final_project_amit56/core/helper/spacing.dart';
-import 'package:final_project_amit56/core/theming/styles.dart';
-import 'package:final_project_amit56/features/favorite/ui/widgets/favorite_item_details_productd.dart';
-import 'package:final_project_amit56/features/home/data/models/details_product_model.dart';
-import 'package:final_project_amit56/features/home/data/models/products_model.dart';
-import 'package:final_project_amit56/features/home/logic/home_cubit.dart';
+import '../../../core/base_widget/custom_network_image.dart';
+import '../../../core/base_widget/loading_indictor.dart';
+import '../../../core/helper/spacing.dart';
+import '../../../core/theming/styles.dart';
+import '../../cart/ui/widgets/cart_button_details_screen.dart';
+import '../../favorite/ui/widgets/favorite_item_details_productd.dart';
+import '../data/models/details_product_model.dart';
+import '../data/models/products_model.dart';
+import '../logic/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -25,29 +26,14 @@ class ProductDetailsScreen extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        var cubit = HomeCubit.get(context);
         return detailsProductsModel == null
-            ? Scaffold(
-                body: const Center(
-                    child: SpinKitFadingCube(
-                  color: Colors.brown,
-                )),
-              )
+            ? Scaffold(body: LoadingIndictor())
             : Scaffold(
                 appBar: AppBar(
                   elevation: 0,
                   backgroundColor: Colors.white,
                   actions: [
-                    // IconButton(
-                    //     onPressed: () {},
-                    //     icon: Icon(
-                    //       cubit.detailsProductsModel!.data!.inFavorites!
-                    //           ? Icons.favorite
-                    //           : Icons.favorite_border_sharp,
-                    //       color: cubit.detailsProductsModel!.data!.inFavorites!
-                    //           ? Colors.red
-                    //           : null,
-                    //     ))
+                    
                     FavoriteItemDetailsProductd(
                       productId: detailsProductsModel!.data!.id!,
                       inFavorites: detailsProductsModel!.data!.inFavorites!,
@@ -101,13 +87,10 @@ class ProductDetailsScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                bottomNavigationBar: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: detailsProductsModel!.data!.inCart!
-                      ? CustomButton(text: "Go To Cart", function: () {})
-                      : CustomButton(text: "ADD To Cart", function: () {}),
-                ),
-              );
+                bottomNavigationBar: CartButtonDetailsScreen(
+                  inCart: detailsProductsModel!.data!.inCart!,
+                  productId: detailsProductsModel!.data!.id!,
+                ));
       },
     );
   }

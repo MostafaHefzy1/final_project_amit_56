@@ -1,4 +1,4 @@
-import 'package:final_project_amit56/core/network/local/shared_preference.dart';
+import '../local/shared_preference.dart';
 
 import '../../app_import/app_import.dart';
 
@@ -30,5 +30,14 @@ class DioHelper {
   static Future<Response> postData(
       {required String endPoint, required dynamic data}) async {
     return await dio!.post(endPoint, data: data);
+  }
+  static Future<Response> deleteData(
+      {required String endPoint}) async {
+    return await dio!.delete(endPoint);
+  }
+
+  static Future<Response> putData(
+      {required String endPoint, required dynamic data}) async {
+    return await dio!.put(endPoint, data: data);
   }
 }

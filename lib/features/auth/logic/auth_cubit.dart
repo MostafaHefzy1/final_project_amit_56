@@ -1,9 +1,9 @@
-import 'package:final_project_amit56/core/network/global/dio_helper.dart';
-import 'package:final_project_amit56/core/network/local/shared_preference.dart';
-import 'package:final_project_amit56/core/routing/routes.dart';
-import 'package:final_project_amit56/features/auth/data/models/login_request_model.dart';
-import 'package:final_project_amit56/features/auth/data/models/register_request_model.dart';
-import 'package:final_project_amit56/features/auth/data/repository/auth_repository.dart';
+import '../../../core/network/global/dio_helper.dart';
+import '../../../core/network/local/shared_preference.dart';
+import '../../../core/routing/routes.dart';
+import '../data/models/login_request_model.dart';
+import '../data/models/register_request_model.dart';
+import '../data/repository/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -37,6 +37,8 @@ class AuthCubit extends Cubit<AuthState> {
   TextEditingController registerEmailController = TextEditingController();
   TextEditingController registerPasswordController = TextEditingController();
   TextEditingController registerPhoneController = TextEditingController();
+
+  
   TextEditingController registerNameController = TextEditingController();
   var formKeyRegister = GlobalKey<FormState>();
   void register(context) {

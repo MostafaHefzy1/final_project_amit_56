@@ -1,10 +1,10 @@
-import 'package:final_project_amit56/core/base_widget/custom_network_image.dart';
-import 'package:final_project_amit56/core/helper/default_dimensions.dart';
-import 'package:final_project_amit56/core/helper/spacing.dart';
-import 'package:final_project_amit56/core/routing/routes.dart';
-import 'package:final_project_amit56/core/theming/styles.dart';
-import 'package:final_project_amit56/features/home/data/models/products_model.dart';
-import 'package:final_project_amit56/features/home/logic/home_cubit.dart';
+import 'custom_network_image.dart';
+import '../helper/default_dimensions.dart';
+import '../helper/spacing.dart';
+import '../routing/routes.dart';
+import '../theming/styles.dart';
+import '../../features/home/data/models/products_model.dart';
+import '../../features/home/logic/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

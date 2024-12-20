@@ -6,14 +6,12 @@ import '../../../core/theming/styles.dart';
 import '../../cart/ui/widgets/cart_button_details_screen.dart';
 import '../../favorite/ui/widgets/favorite_item_details_productd.dart';
 import '../data/models/details_product_model.dart';
-import '../data/models/products_model.dart';
 import '../logic/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
-  final int  productId;
+  final int productId;
   const ProductDetailsScreen({super.key, required this.productId});
 
   @override
@@ -33,7 +31,6 @@ class ProductDetailsScreen extends StatelessWidget {
                   elevation: 0,
                   backgroundColor: Colors.white,
                   actions: [
-                    
                     FavoriteItemDetailsProductd(
                       productId: detailsProductsModel!.data!.id!,
                       inFavorites: detailsProductsModel!.data!.inFavorites!,

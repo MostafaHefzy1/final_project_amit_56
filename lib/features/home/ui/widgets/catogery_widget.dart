@@ -16,7 +16,7 @@ class CategoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        HomeCubit.get(context).catogeryProductModel = null  ;
+        HomeCubit.get(context).catogeryProductModel = null;
         HomeCubit.get(context).getProducts(categoryId: categoriesItem.id);
         Navigator.pushNamed(context, Routes.productByCatogery,
             arguments: categoriesItem);
@@ -55,10 +55,13 @@ class CategoryWidget extends StatelessWidget {
                     categoriesItem.name ?? "",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontSize: 16.sp,
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w600),
+                    style: Theme.of(context).textTheme.bodyLarge,
+
+                    //    TextStyle(
+                    //       fontSize: 16.sp,
+                    //       color: Colors.grey,
+                    //       fontWeight: FontWeight.w600),
+                    // )
                   ))),
         ]),
       ),

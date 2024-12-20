@@ -13,8 +13,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
-  final ProductItem productItem;
-  const ProductDetailsScreen({super.key, required this.productItem});
+  final int  productId;
+  const ProductDetailsScreen({super.key, required this.productId});
 
   @override
   Widget build(BuildContext context) {

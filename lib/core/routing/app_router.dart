@@ -1,10 +1,10 @@
+import '../../features/addresses/ui/add_update_delete_address_model.dart';
+
 import '../../features/basic_app/ui/bottom_nav_bar_screen.dart';
 import '../../features/home/data/models/categories_model.dart';
-import '../../features/home/data/models/details_product_model.dart';
-import '../../features/home/data/models/products_model.dart';
 import '../../features/home/ui/product_by_catogery.dart';
 import '../../features/home/ui/product_details_screen.dart';
-import '../../features/settings/ui/address/address_screen.dart';
+import '../../features/addresses/ui/address_screen.dart';
 import '../../features/settings/ui/change_password/change_password_screen.dart';
 import '../../features/settings/ui/profile/profile_screen.dart';
 import '../../features/settings/ui/profile/update_profile_screen.dart';
@@ -21,7 +21,7 @@ class AppRouter {
         return pageRouteBuilder(screen: const RegisterScreen());
 
       case Routes.bottomNavBarScreen:
-        return pageRouteBuilder(screen: BottomNavBarScreen());
+        return pageRouteBuilder(screen: const BottomNavBarScreen());
       case Routes.homeScreen:
         return pageRouteBuilder(screen: HomeScreen());
 
@@ -34,19 +34,23 @@ class AppRouter {
         ));
 
       case Routes.productDetailsScreen:
-        final ProductItem productItem = settings.arguments as ProductItem;
+        final int  productId = settings.arguments as int ;
         return pageRouteBuilder(
             screen: ProductDetailsScreen(
-          productItem: productItem,
+          productId: productId,
         ));
       case Routes.profileScreen:
         return pageRouteBuilder(screen: ProfileScreen());
       case Routes.updateProfileScreen:
-        return pageRouteBuilder(screen: UpdateProfileScreen());
+        return pageRouteBuilder(screen: const UpdateProfileScreen());
       case Routes.changePasswordScreen:
-        return pageRouteBuilder(screen: ChangePasswordScreen());
+        return pageRouteBuilder(screen: const ChangePasswordScreen());
       case Routes.addressScreen:
-        return pageRouteBuilder(screen: AddressScreen());
+        return pageRouteBuilder(screen: const AddressScreen());
+      case Routes.addUpdateDeleteAddressScreen:
+        final dynamic addresseItem = settings.arguments as dynamic;
+        return pageRouteBuilder(
+            screen: AddUpdateDeleteAddressScreen(addresseItem: addresseItem));
     }
     return null;
   }

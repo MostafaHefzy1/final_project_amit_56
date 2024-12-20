@@ -1,3 +1,5 @@
+import '../../../../core/routing/routes.dart';
+import '../../../addresses/logic/addresses_cubit.dart';
 import 'package:flutter/material.dart';
 
 class SettingItem extends StatelessWidget {
@@ -13,7 +15,12 @@ class SettingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, routeName);
+        if (routeName == Routes.addressScreen) {
+          AddressesCubit.get(context).getAddresses();
+          Navigator.pushNamed(context, routeName);
+        } else {
+          Navigator.pushNamed(context, routeName);
+        }
       },
       child: ListTile(
         leading: Icon(iconData),

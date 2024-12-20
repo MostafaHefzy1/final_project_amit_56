@@ -6,13 +6,10 @@ class Routes {
   static const String productByCatogery = "/productByCatogery";
   static const String productDetailsScreen = "/productDetailsScreen";
 
-
-  
   static const String profileScreen = "/profileScreen";
   static const String updateProfileScreen = "/updateProfileScreen";
-  static const String addressScreen = "/addressScreen";
   static const String changePasswordScreen = "/changePasswordScreen";
 
-
-
+  static const String addressScreen = "/addressScreen";
+  static const String addUpdateDeleteAddressScreen = "/addUpdateDeleteAddressScreen";
 }

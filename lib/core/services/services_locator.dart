@@ -1,3 +1,7 @@
+import '../../features/addresses/data/repository/addresses_repository.dart';
+import '../../features/addresses/data/web_services/addresses_web_services.dart';
+import '../../features/addresses/logic/addresses_cubit.dart';
+
 import '../../features/auth/data/repository/auth_repository.dart';
 import '../../features/auth/data/web_services/auth_web_services.dart';
 import '../../features/auth/logic/auth_cubit.dart';
@@ -44,4 +48,8 @@ Future<void> initGetIt() async {
   sl.registerFactory(() => CartCubit(sl()));
   sl.registerLazySingleton(() => CartRepository(sl()));
   sl.registerLazySingleton(() => CartWebServices());
+
+  sl.registerFactory(() => AddressesCubit(sl()));
+  sl.registerLazySingleton(() => AddressesRepository(sl()));
+  sl.registerLazySingleton(() => AddressesWebServices());
 }

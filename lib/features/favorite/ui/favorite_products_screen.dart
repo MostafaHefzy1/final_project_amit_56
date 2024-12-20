@@ -1,3 +1,6 @@
+import '../../../core/routing/routes.dart';
+import '../../home/logic/home_cubit.dart';
+
 import '../../../core/base_widget/custom_app_bar.dart';
 import '../../../core/base_widget/custom_network_image.dart';
 import '../../../core/base_widget/loading_indictor.dart';
@@ -36,8 +39,16 @@ class FavoriteProductsScreen extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return InkWell(
                         onTap: () {
-                          // HomeCubit.get(context)
-                          //     .getDetailsProduct( cubit.favoriteProductsModel!.data!.data![index].id!);
+                          HomeCubit.get(context).getDetailsProduct(cubit
+                              .favoriteProductsModel!
+                              .data!
+                              .data![index]
+                              .product!
+                              .id!);
+                          Navigator.pushNamed(
+                              context, Routes.productDetailsScreen,
+                              arguments: cubit.favoriteProductsModel!.data!
+                                  .data![index].product!.id);
                         },
                         child: Container(
                             width: MediaQuery.of(context).size.width / 2,

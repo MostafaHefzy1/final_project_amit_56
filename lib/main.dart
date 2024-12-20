@@ -1,3 +1,5 @@
+import 'features/addresses/logic/addresses_cubit.dart';
+
 import 'core/bloc_observer/bloc_observer.dart';
 import 'core/network/global/dio_helper.dart';
 import 'core/network/local/shared_preference.dart';
@@ -46,6 +48,7 @@ class MyApp extends StatelessWidget {
             BlocProvider(create: (BuildContext context) => sl<FavoriteCubit>()),
             BlocProvider(create: (BuildContext context) => sl<ProfileCubit>()),
             BlocProvider(create: (BuildContext context) => sl<CartCubit>()),
+            BlocProvider(create: (BuildContext context) => sl<AddressesCubit>()),
           ],
           child: MaterialApp(
             title: 'Flutter Demo',

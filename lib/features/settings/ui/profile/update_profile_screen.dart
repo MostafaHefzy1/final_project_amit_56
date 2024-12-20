@@ -1,12 +1,13 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/base_widget/custom_app_bar.dart';
 import '../../../../core/base_widget/custom_button.dart';
 import '../../../../core/base_widget/custom_text_form_filed.dart';
 import '../../../../core/helper/spacing.dart';
 import '../../logic/profile_cubit.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class UpdateProfileScreen extends StatelessWidget {
   const UpdateProfileScreen({super.key});

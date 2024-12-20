@@ -18,7 +18,7 @@ class ProductWidget extends StatelessWidget {
         onTap: () {
           HomeCubit.get(context).getDetailsProduct(productItem.id!);
           Navigator.pushNamed(context, Routes.productDetailsScreen,
-              arguments: productItem);
+              arguments: productItem.id);
         },
         child: Container(
             width: MediaQuery.of(context).size.width / 2,

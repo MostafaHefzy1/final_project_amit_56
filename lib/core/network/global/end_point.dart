@@ -13,3 +13,5 @@ const String updateProfileEndPoint = "update-profile";
 const String changePasswordEndPoint = "change-password";
 
 const String cartsEndPoint = "carts";
+
+const String addressesEndPoint = "addresses";

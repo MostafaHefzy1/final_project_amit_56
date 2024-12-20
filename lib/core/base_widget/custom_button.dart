@@ -7,17 +7,19 @@ class CustomButton extends StatelessWidget {
   final String text;
   final Function function;
   final bool loading;
+  final Color colorButton;
   const CustomButton(
       {super.key,
       required this.text,
       required this.function,
-      this.loading = false});
+      this.loading = false,
+      this.colorButton = Colors.brown});
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.brown,
+        color: colorButton,
         borderRadius: AppDimensions.defaultBorderRaduis,
       ),
       child: MaterialButton(

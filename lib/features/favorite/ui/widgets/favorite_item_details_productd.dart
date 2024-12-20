@@ -1,9 +1,9 @@
 import '../../../../core/base_widget/loading_indictor.dart';
 import '../../logic/favorite_cubit.dart';
-import '../../../home/logic/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+// ignore: must_be_immutable
 class FavoriteItemDetailsProductd extends StatelessWidget {
   bool inFavorites;
   final int productId;
